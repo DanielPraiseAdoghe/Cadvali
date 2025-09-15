@@ -1,0 +1,185 @@
+body{
+    overflow-x: hidden;
+}
+
+
+@media screen and (max-width:1300px){
+    section.hero .heroCont{
+        /* display: block; */
+        flex-direction: column;
+        
+    }
+    section.hero .heromsg, 
+    section.hero .heropicCont{
+        align-items: center;
+        width: 100%;
+        min-height: 50vh;
+    }
+    section.hero .heromsg{
+        margin: 4rem 0 2rem;
+        text-align: center;
+        h1{
+            color: var(--Gold);
+            font-size: calc(4rem + 1vw);
+            margin-bottom: 1rem;
+        }
+    }
+    section.hero .heropicCont{
+        display: flex;
+        justify-content: center;
+        min-height: 80vh;
+        align-items: center;
+        
+        .back{
+            background-image: url(assets/Images/Shoe23.jpg);
+            transform: rotateZ(10deg);
+        
+        }
+        .fb{
+             background-image: url(assets/Images/Shoe25.jpg);
+            transform: rotateZ(10deg);
+        }
+        .front, .back, .fb{
+            position: relative;
+            top:0;
+            left:0;
+        }
+    }
+    section.ceoword{
+        display: block;
+        height: auto;
+    }
+    section.ceoword div.textCont,
+    section.ceoword div.imgCont
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    section.ceoword .imgCont{
+        background-color: var(--Brown);
+        height: 70vh;
+        img{
+            max-width: 100vw;
+        }
+    }
+    
+}
+
+@media screen and (max-width:1124px){
+    section.hero .heropicCont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        .front , .back, .fb{
+            
+            height: 70vh;
+
+            display: inline-block;
+            position: relative;
+            border: 10px groove  var(--Gold) ;
+            
+            
+        }
+    }
+    section.collections h1{
+        display: none;
+    }
+    
+
+}
+
+@media screen and (max-width:932px) {
+    section.offers .offersCont{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    section.offers .offer{
+        width: 75%;
+    }
+    section.collections{
+        padding: 3rem 3rem 10rem;
+    }
+    section.collections .collectCont{
+        width: 100%;
+    }
+    section.collections .collect,
+    section.collections .collect:nth-child(3){
+        flex-direction: column;
+    }
+    
+    section.collections .collect .collectpic,
+    section.collections .collect .collecttext{
+        width: 100%;
+    }
+
+    section.testimonials .testGCont,
+    section.testimonials .test,
+    section.testimonials .test .image,
+    section.testimonials .test .text
+    {
+        display: block;
+        width: 100%;
+    }
+    
+    section.testimonials .test .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    footer{
+            padding: 3rem 2rem 5rem;
+
+    }
+    footer .footerCont{
+        width: 100%;
+        flex-direction: column;
+    }
+    section.luxury,
+    section.bespoke{
+        .imgCont{
+            width: 100%;
+            img{
+                max-height: none;
+                aspect-ratio: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width:532px){
+    section.hero .heropicCont .front,
+    section.hero .heropicCont .back,
+    section.hero .heropicCont .fb{
+        transform:none;
+        margin:1rem 0; 
+        width: 100%;
+        max-height: 75vh;
+        max-width: 80vw;
+    }
+    section.hero{
+        padding:15px;
+        margin:0;
+    }
+    section.hero .heropicCont{
+        padding:15px;
+    }
+    footer{
+            padding: 3rem 2rem 5rem;
+
+    }
+    footer .footerCont{
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0;
+    }
+}

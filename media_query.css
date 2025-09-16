@@ -77,7 +77,7 @@ body{
         flex-direction: column;
         .front , .back, .fb{
             
-            height: 70vh;
+            height: 50vh;
 
             display: inline-block;
             position: relative;
@@ -154,16 +154,30 @@ body{
 }
 
 
+@media screen and (max-width:750px){
+    nav .menuButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        height: 100%;
+    }
+    nav ul.navmain{
+        display: none;
+    }
+    
+}
 
-
-@media screen and (max-width:532px){
+@media screen and (max-width:550px){
+    
+    
     section.hero .heropicCont .front,
     section.hero .heropicCont .back,
     section.hero .heropicCont .fb{
         transform:none;
         margin:1rem 0; 
         width: 100%;
-        max-height: 75vh;
+        max-height: 45vh;
         max-width: 80vw;
     }
     section.hero{
@@ -173,13 +187,31 @@ body{
     section.hero .heropicCont{
         padding:15px;
     }
+    section.offers{
+        padding:0;
+        .offersCont{
+            margin-bottom: 2rem;
+            padding:3rem 5px;
+            gap:3rem;
+        }
+    }
+    section.testimonials{
+        padding:0;
+        .testGCont h2{
+            margin: 1rem 1rem 3rem;
+        }
+        .test{
+            padding: 2rem 1rem;
+        }
+    }
     footer{
-            padding: 3rem 2rem 5rem;
-
+            /* padding: 3rem 2rem 5rem; */
+        padding:0;
     }
     footer .footerCont{
         width: 100%;
         flex-direction: column;
         border-radius: 0;
+        gap:4rem;
     }
 }

@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/75d8986235.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="scrollToTop"><i class="fa-solid fa-arrow-up"></i></div>
     <header>
         <nav>
             <div class="logoCont">
@@ -18,7 +19,16 @@
                 </a>
             </div>
             <div class="litems">
-                <ul>
+                <ul class="navmain">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="../index.html#footer">Contact</a></li>
+                    <div class="menuButton">E</div>
+
+                </ul>
+                <button onclick="toggleMenu()" class="menuButton"><i class="fa-solid fa-bars"></i></button>
+                <ul class="dropdown">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="about.html">About</a></li>

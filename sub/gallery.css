@@ -20,7 +20,31 @@ html {
 a{text-decoration: none;display: inline-block;}
 body{
     background-color: var(--Brown);
-     
+    position: relative;
+}
+#scrollToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--Gold);
+    color: var(--Black);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 0px var(--Ivory);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+    font-size: 1.5rem;
+    &:hover{
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 0px 0px var(--Ivory);
+        
+    }
 }
 header{
     position: sticky;
@@ -69,23 +93,38 @@ nav .litems{
     justify-content: center;
     align-items: center;
 }
-nav ul{
+nav .menuButton{
+    background-color: var(--Brown);
+    display: inline-block;
+    border: 4px solid var(--Gold);
+    border-radius: 1rem;
+    padding: 1rem;
+    aspect-ratio: 1;
+    color: var(--Ivory);
+    margin: 0 1rem;
+    display: none;
+}
+nav ul.navmain{
     
     overflow: hidden;
+    
     li{
         float: left;
         list-style-type: none;
         margin: 0 10px;
         border-radius: 50% 50% 0 0;
+        animation-name: li;
+        animation-duration: 0.7s;
+        /* animation-play-state: paused; */
         a{
             display: inline-block;
             padding:10px 20px;
-            
+            /* background-color: white; */
             color:var(--Beige);
             font-size: 1.5rem;
             position: relative;
         }
-        a::after{
+        a::after ,a.active::after{
             content: "";
             height: 0;
             width: 100%;
@@ -95,11 +134,13 @@ nav ul{
             left:0;
             transition:all 0.3s ease-in-out;
             border-radius: 120%;
+            
         }
+        
         a:hover{
             color: var(--Gold);
         }
-        &:hover a::after{
+        &:hover a::after, a.active::after{
             background-color:var(--Gold);
             width: 100%;
             height: 13px;
@@ -107,10 +148,54 @@ nav ul{
         }
         &:hover{
             background-color: #c8a06557;
+            
         }
         
     }
 }
+nav ul.dropdown{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--Black);
+    border-radius: 1rem;
+    z-index: 100;
+    li{
+        list-style-type: none;
+         a{
+            display: inline-block;
+            width: 100%;
+            padding:30px 20px;
+            text-align: center;
+            /* background-color: white; */
+            color:var(--Beige);
+            font-size: 1.5rem;
+            position: relative;
+        }
+        a:hover,a:active{
+            background-color: #c8a0655e;
+        }
+    }
+}
+nav ul.dropdown.active{
+        display: block;
+        font-size: 3rem
+}
+nav .dropdown .li{
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+
+
 
 main{
     background-image: url(../assets/Images/ttten.svg);

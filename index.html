@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/75d8986235.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div id="scrollToTop"><i class="fa-solid fa-arrow-up"></i></div>
     <header>
         <nav>
             <div class="logoCont">
@@ -17,12 +18,25 @@
                     <img src="assets/Images/Logomain.png" alt="Cadvali Logo">
                 </a>
             </div>
+            
             <div class="litems">
-                <ul>
+                
+                <ul class="navmain">
+                    
+                    
                     <li id="navli1"><a href="index.html" class="active">Home</a></li>
                     <li id="navli2"><a href="sub/gallery.html">Gallery</a></li>
                     <li id="navli3"><a href="sub/about.html">About</a></li>
                     <li id="navli4"><a href="#footer">Contact</a></li>
+                    
+                    
+                </ul>
+                <button onclick="toggleMenu()" class="menuButton"><i class="fa-solid fa-bars"></i></button>
+                <ul class="dropdown">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sub/gallery.html">Gallery</a></li>
+                    <li><a href="sub/about.html">About</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -174,7 +188,7 @@
             <div class="textCont">
                 <div class="text">
                     <h3><span>"</span><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est veniam nostrum qui pariatur hic, atque quo magnam at reiciendis. Assumenda, rem expedita.<br><span>"</span></h3>
-                    <h1>-Cadvali name, CEO-</h1>
+                    <h1>-Jude Asogwa Tochiesuwa .:CEO-</h1>
                 </div>
             </div>
             <div class="imgCont"><img src="assets/Images/CEO.jpg" alt="CEO's photo"></div>

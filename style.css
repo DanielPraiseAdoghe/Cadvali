@@ -523,7 +523,6 @@ section.collections .collectpic:hover div:not(:hover){
     /* width: 50%; */
   margin-bottom: .5rem;
   /* aspect-ratio: 1; */
-  background-color: green;
   &:hover{
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -706,7 +705,7 @@ section.ceoword .textCont{
         color: var(--Brown);
         span{
             font-size: calc(3rem + 2vw);
-            line-height: 4rem;
+            line-height: 5rem;
             display: inline-block;
             text-shadow: -7px 6px 0px var(--Gold);
 
